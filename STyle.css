@@ -1,5 +1,15 @@
 h1 {
-    color: darkblue;
-    text-align: center;
-  }
-  
+  color: rgb(45, 45, 113);
+  text-align: center;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: rgb(160, 86, 28);
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+body {
+  background-color: aliceblue;
+  background-image: url("Wood.jpg");
+  background-position: "center";
+}
