@@ -4,6 +4,7 @@
     <title>My website temp 01</title>
     <script>
       let isShowMyName = false;
+      let isshowmyskill = false;
       function hello(alertText){
         alert("Hello world!"+alertText)
       };
@@ -26,6 +27,33 @@
         }
         isShowMyName = !isShowMyName;
       }
+      
+
+
+      const Skills = ["HTML", "CSS", "Javascript", "Management", "Understanding"]
+      
+      function generateskill() {
+        let htmlString = '<ol>'
+        for (const x of Skills) {
+          htmlString += `<li>${x}</li>`
+        }
+        htmlString += "</ol>"
+
+        return htmlString;
+    };
+
+      function showmyskill() {
+        isshowmyskill=!isshowmyskill;
+        if(isshowmyskill ==true){
+          document.getElementById("hardskill").innerHTML = generateskill();
+        }
+        else {
+          document.getElementById("hardskill").innerHTML = "";
+        }
+       
+      }
+
+
     </script>
   </head>
   <link rel="stylesheet" type="text/css" href="STyle.css">
@@ -77,17 +105,10 @@
           <b> Skills I'm about to learn </b>
         </font>
         <ul type="circle">
-          <li>Hard skill</li>
-          <ol>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ol>
-          <li>Soft skill</li>
-          <ol>
-            <li>Communication</li>
-            <li>Time management</li>
-          </ol>
+            <button onclick="showmyskill()">
+              skill check
+            </button>
+            <div id="hardskill"></div>
         </ul>
       </p>
     </div>
