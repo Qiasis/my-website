@@ -28,7 +28,7 @@
         isShowMyName = !isShowMyName;
       }
       
-
+      
 
       const Skills = ["HTML", "CSS", "Javascript", "Management", "Understanding"]
       
@@ -115,5 +115,39 @@
     <p>
       Contact info: click <a href="Contact.html">here</a>
     </p>
+
+     <!-- ปุ่มขึ่น -->
+  <div id="goUpButton"><img class="goup" src="Three wolf meme.jpg" alt=""></div>
+  <script>
+
+    // Show the go up button when user scrolls down
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("goUpButton").style.display = "block";
+      } else {
+        document.getElementById("goUpButton").style.display = "none";
+      }
+    }
+
+    // Scroll back to the top of the page with smooth animation
+    document.getElementById("goUpButton").addEventListener("click", function () {
+      scrollToTop(1000); // 1000 milliseconds (1 second) for the animation duration
+    });
+
+    function scrollToTop(scrollDuration) {
+      var scrollStep = -window.scrollY / (scrollDuration / 15);
+      var scrollInterval = setInterval(function () {
+        if (window.scrollY != 0) {
+          window.scrollBy(0, scrollStep);
+        }
+        else clearInterval(scrollInterval);
+      }, 15);
+    }
+
+
+  </script>
+
   </body>
 </html>

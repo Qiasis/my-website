@@ -34,3 +34,21 @@ body {
   word-spacing: 2px;
   font-size: 50px;
 }
+
+#goUpButton {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.goup{
+  width: 100%;
+}
