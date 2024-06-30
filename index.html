@@ -1,30 +1,46 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>My website temp 01</title>
-    <style>
-
-    </style>
-
     <script>
-      function hello(Heloo tehre) {
-        alert("Hello World!");
+      let isShowMyName = false;
+      function hello(alertText){
+        alert("Hello world!"+alertText)
+      };
+      function showMyName(){
+        if(isShowMyName){
+          document.getElementById("myName").innerHTML = `
+          <button onclick="showMyName()">
+            showMyName
+          </button>
+          `;
+        } 
+        else 
+        {
+          document.getElementById("myName").innerHTML = `
+          My Name is: <b>Sahapat Boonsrisook</b>
+          <button onclick="showMyName()">
+            showMyName
+          </button>
+          `;
+        }
+        isShowMyName = !isShowMyName;
       }
     </script>
-    
   </head>
   <link rel="stylesheet" type="text/css" href="STyle.css">
-
   <body>
     <h1 align="center">
-        Hello there!
+      Hello there!
     </h1>
     <p align="center">
       <img src="JUAN 2.jpg" width="150"/>
     </p>
-    <p class="text-style1" align="center">
-        My name is <br/> Sahapat Boonsrisook
+
+    <p id="myName" class="text-style1" align="center">
+      <button onclick="showMyName()">
+        showMyName
+      </button>
     </p>
     <p align="center" class="text-style2" >
         <i>
@@ -34,6 +50,13 @@
           </b>
         </i>
     </p>
+
+    <p align="center">
+      <button onclick="hello('Aloha amigo')">
+        Click me!
+      </button>
+    </p>
+
     <p align="center">
       Hello there. You must be Noobmaster69. My name is Qiasis, <br />
       I am the apprentice of master of technology magic, dkscenter.com. <br />
@@ -41,34 +64,31 @@
     </p>
 
     <p align="center">
-    <button onclick="hello('Hello there')">
-      Click me!
-    </button>
+      <button onclick="hello('Hello there')">
+        Click me!
+      </button>
     </p>
 
     <br/>
     <br/>
     <div style="border: solid" class="box-size">
       <p class="text-style">
-        <p>
-            <font size="5">
-              <b> Skills I'm about to learn </b>
-            </font>
-            <ul type="circle">
-              <li>Hard skill</li>
-              <ol>
-                  <li>HTML</li>
-                  <li>CSS</li>
-                  <li>JavaScript</li>
-              </ol>
-              <li>Soft skill</li>
-              <ol>
-                  <li>Communication</li>
-                  <li>Time management</li>
-              </ol>
-            </ul>
-          </p>
-          <p>
+        <font size="5">
+          <b> Skills I'm about to learn </b>
+        </font>
+        <ul type="circle">
+          <li>Hard skill</li>
+          <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ol>
+          <li>Soft skill</li>
+          <ol>
+            <li>Communication</li>
+            <li>Time management</li>
+          </ol>
+        </ul>
       </p>
     </div>
     <p>

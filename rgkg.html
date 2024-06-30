@@ -1,15 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <link rel="stylesheet" type="text/css" href="STyle.css" />
-
-  <body>
-    <p align="center">
-        My name is <br/> Sahapat Boonsrisook
-    </p>
-  </body>
-</html>
+function toggleMyName(){
+  if(!isShowMyName){
+    document.getElementById("myName").innerHTML = "My Name is: <b>Komphet Meesab</b>";
+  } else {
+    document.getElementById("myName").innerHTML = "";
+  }
+  isShowMyName = !isShowMyName
+}
