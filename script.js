@@ -1,14 +1,17 @@
 let isShowMyName = false;
 let isshowmyskill = false;
+
+
+
 function hello(alertText){
-    alert("Hello world!"+alertText)
+  alert("Hello world!"+alertText)
  };
 
 function showMyName(){
     if(isShowMyName){
         document.getElementById("myName").innerHTML = `
           <button onclick="showMyName()">
-            showMyName
+            Show My Name
           </button>
           `;
         } 
@@ -17,7 +20,7 @@ function showMyName(){
           document.getElementById("myName").innerHTML = `
           My Name is:<br/><b>Sahapat Boonsrisook</b>
           <br/><button onclick="showMyName()">
-            showMyName
+            Hide My Name
           </button>
           `;
         }
