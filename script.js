@@ -66,7 +66,7 @@ window.onscroll = function () { scrollFunction() };
         }
     
         document.getElementById("goUpButton").addEventListener("click", function () {
-            scrollToTop(500); // 1000 milliseconds (1 second) for the animation duration
+            scrollToTop(100); // 1000 milliseconds (1 second) for the animation duration
         });
     
 function scrollToTop(scrollDuration) {
