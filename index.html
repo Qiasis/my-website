@@ -1,153 +1,69 @@
 <!DOCTYPE html>
+
 <html>
   <head>
     <title>My website temp 01</title>
-    <script>
-      let isShowMyName = false;
-      let isshowmyskill = false;
-      function hello(alertText){
-        alert("Hello world!"+alertText)
-      };
-      function showMyName(){
-        if(isShowMyName){
-          document.getElementById("myName").innerHTML = `
-          <button onclick="showMyName()">
-            showMyName
-          </button>
-          `;
-        } 
-        else 
-        {
-          document.getElementById("myName").innerHTML = `
-          My Name is: <b>Sahapat Boonsrisook</b>
-          <button onclick="showMyName()">
-            showMyName
-          </button>
-          `;
-        }
-        isShowMyName = !isShowMyName;
-      }
-      
-      
-
-      const Skills = ["HTML", "CSS", "Javascript", "Management", "Understanding"]
-      
-      function generateskill() {
-        let htmlString = '<ol>'
-        for (const x of Skills) {
-          htmlString += `<li>${x}</li>`
-        }
-        htmlString += "</ol>"
-
-        return htmlString;
-    };
-
-      function showmyskill() {
-        isshowmyskill=!isshowmyskill;
-        if(isshowmyskill ==true){
-          document.getElementById("hardskill").innerHTML = generateskill();
-        }
-        else {
-          document.getElementById("hardskill").innerHTML = "";
-        }
-       
-      }
-
-
-    </script>
   </head>
-  <link rel="stylesheet" type="text/css" href="STyle.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
   <body>
-    <h1 align="center">
+    <p id="header">
       Hello there!
-    </h1>
-    <p align="center">
-      <img src="JUAN 2.jpg" width="150"/>
+    </p>
+    <p id="JUAN">
+      <img src="JUAN 2.jpg"
+       alt="The best dog ever"
+        style="width: 300px;"
+      >
     </p>
 
-    <p id="myName" class="text-style1" align="center">
+    <p id="myName" class="text-style1">
       <button onclick="showMyName()">
-        showMyName
+        show/hide My Name
       </button>
     </p>
-    <p align="center" class="text-style2" >
-        <i>
-          <b>
-            Pleased to meet you
-            <!--as fast as you can-->
-          </b>
-        </i>
+
+    <p class="text-style2">
+      Pleased to meet you
     </p>
 
-    <p align="center">
+    <p class="button1">
       <button onclick="hello('Aloha amigo')">
-        Click me!
+        Hello!
       </button>
     </p>
 
-    <p align="center">
+    <p id="longText">
       Hello there. You must be Noobmaster69. My name is Qiasis, <br />
       I am the apprentice of master of technology magic, dkscenter.com. <br />
       I hope we will get along.
     </p>
 
-    <p align="center">
+    <p class="button1">
       <button onclick="hello('Hello there')">
-        Click me!
+        Hello, but from Chicago!
       </button>
     </p>
 
     <br/>
     <br/>
+    
     <div style="border: solid" class="box-size">
-      <p class="text-style">
-        <font size="5">
-          <b> Skills I'm about to learn </b>
-        </font>
-        <ul type="circle">
+      <p class="text-style3">
+          Skills I'm about to learn
+        <p class="button2">
             <button onclick="showmyskill()">
-              skill check
+              Skill check
             </button>
             <div id="hardskill"></div>
-        </ul>
+          </p>
       </p>
     </div>
     <p>
       Contact info: click <a href="Contact.html">here</a>
     </p>
-
-     <!-- ปุ่มขึ่น -->
-  <div id="goUpButton"><img class="goup" src="Three wolf meme.jpg" alt=""></div>
-  <script>
-
-    // Show the go up button when user scrolls down
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        document.getElementById("goUpButton").style.display = "block";
-      } else {
-        document.getElementById("goUpButton").style.display = "none";
-      }
-    }
-
-    // Scroll back to the top of the page with smooth animation
-    document.getElementById("goUpButton").addEventListener("click", function () {
-      scrollToTop(1000); // 1000 milliseconds (1 second) for the animation duration
-    });
-
-    function scrollToTop(scrollDuration) {
-      var scrollStep = -window.scrollY / (scrollDuration / 15);
-      var scrollInterval = setInterval(function () {
-        if (window.scrollY != 0) {
-          window.scrollBy(0, scrollStep);
-        }
-        else clearInterval(scrollInterval);
-      }, 15);
-    }
-
-
-  </script>
-
+    <div id="goUpButton"><img class="goUp" src="Three wolf meme.jpg" alt=""></div>
+    <script src="script.js">
+    </script>
   </body>
 </html>
