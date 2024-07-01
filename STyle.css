@@ -91,3 +91,7 @@ body {
   margin-bottom: 0px
 }
 
+.table1 th, td {
+  border: 1px solid;
+  width: 80%;
+}
